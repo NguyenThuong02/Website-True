@@ -1,3 +1,14 @@
+:root {
+  --Secondary: #FF0054;
+  --Primary: #0DC5AE;
+  --text: 'Poppins', sans-serif;
+  --text-color: #637381;
+  --text-color2: #212B36;
+  --color-black: #222831;
+  --margin-desktop: 144px;
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,6 +22,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--Secondary) !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

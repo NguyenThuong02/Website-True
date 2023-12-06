@@ -6,14 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/TrangChu';
 import ForMe from './components/ForMe/ForMe';
+import Header from './components/Header/Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/forme" element={<ForMe />}/>
+        <Route element={<App />}>
+          <Route path="/forme" element={<ForMe />}/>
+          <Route index element={<Home />}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
