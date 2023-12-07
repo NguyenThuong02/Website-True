@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import human from '../../img/human.png'
 import search from '../../img/iconSearch.svg'
+import search1 from '../../img/iconbase.svg'
 
 import TanTam from '../../img/logoBody/1.png'
 import LangNghe from '../../img/logoBody/2.png'
@@ -47,62 +48,66 @@ function Home() {
 
             {/* Body header */}
             <div className="h-[880px] w-full bg-be shrink-0">
-                <div className="absolute flex justify-center pt-[196px] px-[var(--margin-desktop)] gap-[122px]">
-                    <div className='flex-1'>
-                        <div className='flex flex-col pb-[48px] items-start gap-6'>
-                            <h1 className="text-[64px]">
+                <div className="absolute flex flex-col pt-[96px] px-[var(--margin-mobile)] items-center lg:flex-row lg:justify-center lg:pt-[196px] lg:px-[var(--margin-desktop)] lg:gap-[122px]">
+                    <div className='lg:flex-1'>
+                        
+                        <div className='flex flex-col pb-[22px] lg:pb-[48px] items-center lg:items-start gap-[22px] lg:gap-6'>
+                            <h1 className="text-[32px] lg:text-[64px]">
                                 <span className="text-primary font-lora font-bold not-italic leading-normal">True</span>
                                 <span className="text-secondary font-lora font-bold not-italic leading-normal">Connect</span>
                             </h1>
-                            <p className="text-text2 text-[16px] leading-7 text-justify font-lex font-normal">
+                            <p className="text-text2 text-[14px] lg:text-[16px] leading-7 text-justify font-lex font-normal">
                                 Nền tảng mở nhằm mục đích dễ dàng cho các đơn vị phát triển ứng dụng khác có thể tích hợp và đẩy sản phẩm lên nền tảng TrueConnect và có cơ hội tiếp cận tập khách hàng rộng mở của hệ thống.
                             </p>
                         </div>
-                        <form className='flex p-[8px] items-center self-stretch rounded-[9px] bg-[#fff] shadow-input'>
-                            <input className='flex py-[11px] px-[14px] h-12 flex-1 items-center border-transparent border-0 outline-none'/>
-                            <button className='flex items-start p-[12px] rounded-[8px] bg-[#FA541C]'>
-                                <img src={search}/>
+                        
+                        <form className='flex relative flex-col lg:flex-row p-[8px] lg:items-center self-stretch rounded-[9px] gap-[8px] lg:gap-0 bg-[#fff] shadow-input'>
+                            <img className=' absolute lg:hidden left-[26px] top-[18px] w-[24px] h-[24px]' src={search1} alt='search'/>
+                            <input className='  flex py-[11px] pl-[48px] pr-[14px] lg:px-[14px] h-12 flex-1 items-center border-transparent border-0 outline-none text-[14px] font-pop leading-[26px] font-normal' placeholder='Job title, keywords...'/>
+                            <button className='flex justify-center gap-[8px] lg:items-start p-[12px] rounded-[8px] bg-[#FA541C]'>
+                                <img src={search} alt='search'/>
+                                <span className=' font-pop text-[15px] text-[#fff] font-semibold leading-[26px] lg:hidden'>Search</span>
                             </button>
                         </form>
                     </div>
-                    <div className='w-[564px] h-[564px]'>
-                        <img src={human}/>
+                    <div className='w-[86.6667%] mt-[10px] aspect-square lg:w-[564px] lg:h-[564px]'>
+                        <img src={human} alt='img'/>
                     </div>
                 </div>
             </div>
 
             {/* Body 2 */}
-            <div className="w-full flex flex-col h-[1303px] gap-[120px] bg-[#f1f1f1]">
-               <div className='flex flex-col py-[90px] pl-[183px] pr-[174px] gap-[120px]'>
-                   <div className='flex justify-center gap-[99px]'>
-                        <div className=' relative w-[565px] flex flex-col gap-[27px]'>
-                            <h2 className="text-[40px]">
+            <div className="w-full flex flex-col lg:gap-[120px] bg-[#f1f1f1]">
+               <div className='flex flex-col py-[22px] lg:py-[90px] px-[var(--margin-mobile)] lg:pl-[12.708%] lg:pr-[12.083%] gap-[20px] lg:gap-[120px]'>
+                   <div className='flex flex-col lg:flex-row justify-center gap-[35px] lg:gap-[99px]'>
+                        <div className=' relative w-full lg:w-[565px] flex flex-col items-center lg:items-start lg:gap-[27px]'>
+                            <h2 className="text-[24px] lg:text-[40px] mb-[10px] lg:mb-0">
                                 <span className="text-primary font-lora font-bold not-italic leading-normal">Công ty Cổ phần Công nghệ </span>
                                 <span className="text-primary font-lora font-bold not-italic leading-normal">True</span>
                                 <span className="text-secondary font-lora font-bold not-italic leading-normal">Connect</span>
                             </h2>
-                            <p className="w-full text-text1 text-[16px] leading-[30px] text-justify font-lex font-normal">
+                            <p className="w-full mb-[20px] lg:mb-0 text-text1 text-[14px] lg:text-[16px] leading-[30px] text-justify font-lex font-normal">
                                 Chúng tôi hoạt động với mong muốn thúc đẩy quá trình kinh doanh và vận hành của Quý khách hàng bằng việc dễ dàng tiếp cận các công cụ Công nghệ thông tin phục vụ hệ thống từ quy mô siêu nhỏ (cá nhân) tới quy mô doanh nghiệp vừa và các giải pháp tuỳ chỉnh hoá cho doanh nghiệp lớn, giúp Quý khách mở rộng mạng lưới kết nối và phát triển kinh doanh ...
                             </p>
-                            <div className='inline-flex flex-col justify-center items-start gap-[19px]'>
-                                <div className='inline-flex items-center gap-[43px]'>
-                                    <div className='flex justify-center items-center gap-[30px]'>
-                                        <img className='w-[46] h-[46px] bg-primary rounded-[46px] text-[#fff]' src={TanTam}/> 
-                                        <span className='text-text1 font-medium text-[22px]'>Tận tâm</span>
+                            <div className='w-full inline-flex flex-col justify-center items-start gap-[19px]'>
+                                <div className='w-full inline-flex items-center justify-between lg:justify-normal lg:gap-[43px]'>
+                                    <div className='flex justify-center items-center gap-[9px] lg:gap-[30px]'>
+                                        <img className='w-[42px] h-[39px] lg:w-[46px] lg:h-[46px] bg-primary rounded-[46px] text-[#fff]' src={TanTam} alt='TanTam'/> 
+                                        <span className='text-text1 font-medium text-[16px] lg:text-[22px]'>Tận tâm</span>
                                     </div>
-                                    <div className='flex justify-center items-center gap-[30px]'>
-                                        <img className='w-[46] h-[46px] bg-primary rounded-[46px]' src={LangNghe}/> 
-                                        <span className='text-text1 font-medium text-[22px]'>Lắng nghe</span>
+                                    <div className='flex justify-center items-center gap-[9px] lg:gap-[30px]'>
+                                        <img className='w-[42px] h-[39px] lg:w-[46px] lg:h-[46px] bg-primary rounded-[46px]' src={LangNghe} alt='LangNghe'/> 
+                                        <span className='text-text1 font-medium text-[16px] lg:text-[22px]'>Lắng nghe</span>
                                     </div>
                                 </div>
-                                <div className='flex justify-center items-center gap-[30px]'>
-                                    <img className='w-[46] h-[46px] bg-primary rounded-[46px]' src={SangTao}/> 
-                                    <span className='text-text1 font-medium text-[22px]'>Sáng tạo</span>
+                                <div className='flex justify-center items-center gap-[9px] lg:gap-[30px]'>
+                                    <img className='w-[42px] h-[39px] lg:w-[46px] lg:h-[46px] bg-primary rounded-[46px]' src={SangTao} alt='SangTao'/> 
+                                    <span className='text-text1 font-medium text-[16px] lg:text-[22px]'>Sáng tạo</span>
                                 </div>
                             </div>
-                            <Link className='flex items-center absolute top-[94%] right-[40px] text-[20px] text-secondary font-pop font-semibold' to="/forme">
+                            <Link className='flex items-center absolute bottom-[0] lg:top-[94%] right-0 lg:right-[40px] text-[14px] lg:text-[20px] text-secondary font-pop font-semibold' to="/forme">
                                 Xem thêm 
-                                <i className="fa fa-chevron-right ml-[8px] mt-[11px] text-[16px] w-[24px] h-[24px] font-normal"></i>
+                                <i className="fa fa-chevron-right ml-[8px] mt-[8px] lg:mt-[11px] text-[14px] lg:text-[16px] w-[20px] lg:w-[24px] h-[20px] lg:h-[24px] font-normal"></i>
                             </Link>
                         </div>
                         
@@ -113,20 +118,20 @@ function Home() {
                         </div>
                    </div>
     
-                   <div className='flex flex-col gap-[69px] items-center'>
-                        <h2 className='text-center text-[#023F3A] text-[40px] font-lora font-bold not-italic'>Tại sao nên lựa chọn chúng tôi</h2>
-                        <div className='grid grid-cols-3 gap-[40px]'>
-                            <div className='w-[351px] shrink-0 rounded-[20px] bg-[#fff] shadow-itemBody1 hover:scale-[1.009] transition-all hover:cursor-pointer'>
-                                <img src={img1} className=' pt-[22px] pl-[55px] pr-[64px] pb-[11px]' />
-                                <div className='pl-[14px] pr-[13px]'>
+                   <div className='flex flex-col gap-[22px] lg:gap-[69px] items-center'>
+                        <h2 className='text-center text-[#023F3A] text-[20px] lg:text-[40px] font-lora font-bold not-italic'>Tại sao nên lựa chọn chúng tôi</h2>
+                        <div className='grid grid-cols-1 lg:grid-cols-3 gap-[20px] lg:gap-[40px]'>
+                            <div className='w-full lg:w-[351px] shrink-0 rounded-[20px] bg-[#fff] shadow-itemBody1 hover:scale-[1.009] transition-all hover:cursor-pointer'>
+                                <img src={img1} alt='img1' className=' pt-[22px] px-[15.38%] lg:pl-[55px] lg:pr-[64px] pb-[4px] lg:pb-[11px]'/>
+                                <div className='px-[10px] lg:pl-[14px] lg:pr-[13px]'>
                                     <h3 className=' mb-[3px] mt-[21px] font-lora text-[20px] font-semibold text-primary'>Giá cả hợp lý</h3>
                                     <p className=' mb-[6px] text-text1 font-pop text-[14px] font-normal leading-[25px]'>
                                         Giá thành hợp lý được cung cấp với từng mức giá, phù hợp cho mọi đối tượng.
                                     </p>
                                 </div>
                             </div>
-                            <div className='w-[351px] shrink-0 rounded-[20px] bg-[#fff] shadow-itemBody1 hover:scale-[1.009] transition-all hover:cursor-pointer'>
-                                <img src={img2} className=' pt-[22px] pl-[55px] pr-[64px] pb-[11px]'/>
+                            <div className='w-full lg:w-[351px] shrink-0 rounded-[20px] bg-[#fff] shadow-itemBody1 hover:scale-[1.009] transition-all hover:cursor-pointer'>
+                                <img src={img2} className=' pt-[22px] px-[15.38%] lg:pl-[55px] lg:pr-[64px] pb-[4px] lg:pb-[11px]' alt='img2'/>
                                 <div className='pl-[14px] pr-[13px]'>
                                     <h3 className=' mb-[3px] mt-[21px] font-lora text-[20px] font-semibold text-primary'>Giá cả hợp lý</h3>
                                     <p className=' mb-[6px] text-text1 font-pop text-[14px] font-normal leading-[25px]'>
@@ -134,8 +139,8 @@ function Home() {
                                     </p>
                                 </div>
                             </div>
-                            <div className='w-[351px] shrink-0 rounded-[20px] bg-[#fff] shadow-itemBody1 hover:scale-[1.009] transition-all hover:cursor-pointer'>
-                                <img src={img3} className=' pt-[22px] pl-[55px] pr-[64px] pb-[11px]'/>
+                            <div className='w-full lg:w-[351px] shrink-0 rounded-[20px] bg-[#fff] shadow-itemBody1 hover:scale-[1.009] transition-all hover:cursor-pointer'>
+                                <img src={img3} className=' pt-[22px] px-[15.38%] lg:pl-[55px] lg:pr-[64px] pb-[4px] lg:pb-[11px]' alt='img3'/>
                                 <div className='pl-[14px] pr-[13px]'>
                                     <h3 className=' mb-[3px] mt-[21px] font-lora text-[20px] font-semibold text-primary'>Giá cả hợp lý</h3>
                                     <p className=' mb-[6px] text-text1 font-pop text-[14px] font-normal leading-[25px]'>

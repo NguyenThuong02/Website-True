@@ -6,7 +6,7 @@ import Home from './components/Home/TrangChu';
 
 function App() {
   return (
-    <div className="App w-[1440px]">
+    <div className="App">
       <div>
           <Header />
       </div>
