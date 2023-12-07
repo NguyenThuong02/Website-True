@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'bginput': 'rgba(145, 158, 171, 0.08)',
         'be': 'rgba(249, 240, 236, 1)',
         'primary': 'var(--Primary)',
         'secondary': 'var(--Secondary)',
@@ -19,7 +20,8 @@ module.exports = {
     fontFamily: {
       'pop' : ['Poppins', 'sans-serif'],
       'lora' : ['Lora', 'serif'],
-      'lex': ['Lexend', 'sans-serif']
+      'lex': ['Lexend', 'sans-serif'],
+      'bar': ['Barlow', 'sans-serif'],
     },
   },
   plugins: [
