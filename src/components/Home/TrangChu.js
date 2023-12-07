@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import human from '../../img/human.png'
 import search from '../../img/iconSearch.svg'
 
@@ -29,6 +29,15 @@ import p5 from '../../img/Body5/p5.png'
 import p6 from '../../img/Body5/p6.png'
 import iconEmail from '../../img/ic_email.svg'
 import iconAdress from '../../img/ic_pin.svg'
+
+import logo from '../../img/logo.png'
+import emailFooter from '../../img/footer/Message.svg'
+import addressFooter from '../../img/footer/Map marker.svg'
+import ytbIcon from '../../img/footer/youtube 1.png'
+import fbIcon from '../../img/footer/facebook 1.png'
+import tiktokIcon from '../../img/footer/icon-06 1.png'
+import leftIcon from '../../img/footer/leftIcon.svg'
+
 
 import './Home.css'
 
@@ -354,9 +363,79 @@ function Home() {
             </div>
 
             {/* Body footer */}
-            <div className='h-[400px] bg-slate-600'>
-
+            <div className='pl-[69.94px] pr-[158px] pt-[62.43px] pb-[50px] flex flex-col items-start gap-[32px]'>
+                <img className='ml-[-20px] w-[231px] h-[60px] shrink-0' src={logo}/>
+                <div className='w-full flex justify-between gap-[100px]'>
+                    {/* Footer Left */}
+                    <div className='flex flex-1 flex-col items-start gap-[20px]'>
+                        <h3 className=' font-pop text-[20px] font-normal leading-5'>
+                            CÔNG TY CỔ PHẦN CÔNG NGHỆ TRUECONNECT 
+                        </h3>
+                        <ul className='flex flex-col items-start gap-[15px]'>
+                            <div className='flex items-center gap-[8px] text-[#000]'>
+                                <img className='w-[20px] h-[20px] ' src={emailFooter}/>
+                                <span className=' font-pop font-normal leading-7 text-[14px]'>
+                                    dvkh.trueconnect@gmail.comcom
+                                </span>
+                            </div>
+                            <div className='flex items-center gap-[8px] text-[#000]'>
+                                <img className='w-[20px] h-[20px]' src={addressFooter}/>
+                                <span className=' font-pop font-normal leading-[26px] text-[14px]'>
+                                    80, 69b/22/45 Hoang Van Thai, Khuong Trung Thanh Xuan, Ha Noi
+                                </span>
+                            </div>
+                            <li>
+                                <span className=' font-pop font-normal leading-[26px] text-[14px]'>Hotline/Zalo</span>
+                                <span className=' font-pop font-normal leading-[26px] text-[14px]'>:</span>
+                                <span className=' font-pop font-normal leading-[26px] text-[14px]'>0888 136 622</span>
+                            </li>
+                            <li className=' font-pop font-normal leading-[26px] text-[14px]'>
+                                Số giấy chứng nhận đăng ký kinh doanh:
+                            </li>
+                            <li className=' font-pop font-normal leading-[26px] text-[14px]'>
+                                Ngày cấp: . Nơi cấp: Sở kế hoạch và đầu tư thành phố Hà Nội
+                            </li>
+                        </ul>
+                    </div>
+    
+                    {/* Footer Right */}
+                    <div className='flex-1 flex flex-col justify-between'>
+                        <div className='w-full flex justify-between gap-[80px]'>
+                            <div className='flex-1 flex flex-col items-start gap-[22px]'>
+                                <h4 className=' font-pop text-[13px] text-text1 font-semibold leading-[24px]'>Tài liệu</h4>
+                                <ul className='flex flex-col items-start gap-[14px]'>
+                                    <Link className=' font-pop text-[13px] text-text1 font-normal leading-[24px]' to='/'>Tài liệu hướng dẫn</Link>
+                                </ul>
+                            </div>
+                            <div className='flex-1 flex flex-col items-start gap-[22px]'>
+                                <h4 className=' font-pop text-[13px] text-text1 font-semibold leading-[24px]'>TrueConnect</h4>
+                                <ul className='w-[100%] flex flex-col items-start gap-[14px]'>
+                                    <Link className=' font-pop text-[13px] text-text1 font-normal leading-[24px]' to='/'>Chính sách bảo mật</Link>
+                                    <Link className=' font-pop text-[13px] text-text1 font-normal leading-[24px]' to='/'>Chính sách thanh toán và bán hàng</Link>
+                                    <Link className=' font-pop text-[13px] text-text1 font-normal leading-[24px]' to='/'>Điều khoản và điều kiện sử dụng</Link>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className=' w-full flex justify-between gap-[10px]'>
+                            <a href='https://www.facebook.com/'>
+                                <img className='w-[50px] h-[50px] shrink-0' src={tiktokIcon}/>
+                            </a>
+                            <a href='https://www.facebook.com/'>
+                                <img className='w-[50px] h-[50px] shrink-0' src={fbIcon}/>
+                            </a>
+                            <a href='https://www.facebook.com/'>
+                                <img className='w-[50px] h-[50px] shrink-0' src={ytbIcon}/>
+                            </a>
+                            <input className='w-[310px] py-[10px] px-[12px] font-pop text-[14px] font-normal rounded-[8px] bg-bginput' placeholder='Email'/>
+                            <button className='flex justify-center items-center py-[4px] px-[10px] w-[48px] h-[48px] bg-primary rounded-[8px]'>
+                                <img className='w-[18px] h-[18px] shrink-0' src={leftIcon}/>
+                            </button>
+                        </div>
+                    </div>
+    
+                </div>
             </div>
+           
         </div>
     );
 }
