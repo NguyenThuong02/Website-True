@@ -2,7 +2,7 @@ import logo from '../../img/logo.png'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link, NavLink} from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import MenuIcon from '../../img/Header/Menu.svg'
 import SearchIcon from '../../img/Header/Search.svg'
 import { useState } from 'react';
@@ -13,10 +13,10 @@ function Header() {
     let Links = [
         {name:'Trang chủ', link:'/'},
         {name:'Về chúng tôi', link:'/forme'},
-        {name:'Sản phẩm và dịch vụ', link:'/'},
-        {name:'Tin tức', link:'/'},
-        {name:'Trải nghiệm', link:'/'},
-        {name:'Liên hệ', link:'/'},
+        {name:'Sản phẩm và dịch vụ', link:'/product'},
+        {name:'Tin tức', link:'/news'},
+        {name:'Trải nghiệm', link:'/experience'},
+        {name:'Liên hệ', link:'/relationship'},
     ]
 
     const [nav, setNav] = useState(false)

@@ -6,7 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/TrangChu';
 import ForMe from './components/ForMe/ForMe';
-import Header from './components/Header/Header';
+import Product from './components/Products/Product'
+import New from './components/News/New'
+import Experience from './components/Experience/Experience'
+import Relationship from './components/Relationship/Relationship'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +18,10 @@ root.render(
       <Routes>
         <Route element={<App />}>
           <Route path="/forme" element={<ForMe />}/>
+          <Route path="/product" element={<Product />}/>
+          <Route path="/news" element={<New />}/>
+          <Route path="/experience" element={<Experience />}/>
+          <Route path="/relationship" element={<Relationship />}/>
           <Route index element={<Home />}/>
         </Route>
       </Routes>

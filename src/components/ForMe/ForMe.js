@@ -1,6 +1,6 @@
 function ForMe() {
     return (
-        <div>Hello</div>
+        <div>About us</div>
     );
 }
 

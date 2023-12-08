@@ -40,6 +40,8 @@ import fbIcon from '../../img/footer/facebook 1.png'
 import tiktokIcon from '../../img/footer/icon-06 1.png'
 import leftIcon from '../../img/footer/leftIcon.svg'
 
+import Validation from './Validation'
+import { useState } from 'react'
 
 import './Home.css'
 
@@ -77,6 +79,25 @@ function Home() {
         {name:'Chính sách thanh toán và bán hàng', link:'/'},
         {name:'Điều khoản và điều kiện sử dụng', link:'/'},
     ]
+
+    const [values, setValues] = useState({
+        name: '',
+        email: '',
+        sdt: '',
+        note: ''
+    })
+
+    const [errors, setErrors] = useState({})
+
+    const handleInput = (e) => {
+        const newObj = {...values, [e.target.name]: e.target.value}
+        setValues(newObj)
+    }
+
+    const handleValidation = (e) => {
+        e.preventDefault();
+        setErrors(Validation(values));
+    }
 
     return (
         <div className="w-full">
@@ -391,12 +412,36 @@ function Home() {
                         </div>
                     </div>
     
-                    <form className='w-full lg:w-[466px] flex flex-col items-center lg:items-start'>
-                        <input className=' w-full lg:w-[466px] p-[14px] font-pop text-[14px] text-[#919EAB] font-normal leading-[26px] outline-none rounded-[8px] bg-bginput mb-[22px] lg:mb-[20px]' placeholder='Họ và tên' type='text'/>
-                        <input className=' w-full lg:w-[466px] p-[14px] font-pop text-[14px] text-[#919EAB] font-normal leading-[26px] outline-none rounded-[8px] bg-bginput mb-[22px] lg:mb-[20px]' placeholder='Email của bạn' type='email'/>
-                        <input className=' w-full lg:w-[466px] p-[14px] font-pop text-[14px] text-[#919EAB] font-normal leading-[26px] outline-none rounded-[8px] bg-bginput mb-[22px] lg:mb-[20px]' placeholder='Số điện thoại' type='text'/>
-                        <input className=' w-full lg:w-[466px] p-[14px] font-pop text-[14px] text-[#919EAB] font-normal leading-[26px] outline-none rounded-[8px] bg-bginput' placeholder='Ghi chú' type='text'/>
-                        <button className='w-[172px] mt-[22px] lg:mt-[40px] px-[22px] py-[11px] rounded-[8px] bg-primary font-pop text-[15px] font-semibold leading-[26px] text-[#fff]'>
+                    <form className='gap-[22px] lg:gap-[20px] w-full lg:w-[466px] flex flex-col items-center lg:items-start' onSubmit={handleValidation}>
+                       <div className=' w-full flex flex-col items-start gap-[6px]'>
+                            <input className= ' w-full lg:w-[466px] p-[14px] font-pop text-[14px] text-[#919EAB] font-normal leading-[26px] outline-none rounded-[8px] bg-bginput' 
+                                placeholder='Họ và tên' type='text' onChange={handleInput} name='name'
+                            />
+                            {errors.name && <p className='text-[14px] text-[#ff3333]'>{errors.name}</p>}
+                       </div>
+
+                        <div className=' w-full flex flex-col items-start gap-[6px]'>
+                            <input className=' w-full lg:w-[466px] p-[14px] font-pop text-[14px] text-[#919EAB] font-normal leading-[26px] outline-none rounded-[8px] bg-bginput' 
+                                placeholder='Email của bạn' type='text' onChange={handleInput} name='email'
+                            />
+                            {errors.email && <p className='text-[14px] text-[#ff3333]'>{errors.email}</p>}
+                        </div>
+
+                        <div className=' w-full flex flex-col items-start gap-[6px]'>
+                            <input className=' w-full lg:w-[466px] p-[14px] font-pop text-[14px] text-[#919EAB] font-normal leading-[26px] outline-none rounded-[8px] bg-bginput' 
+                                placeholder='Số điện thoại' type='text' onChange={handleInput} name='sdt'
+                            />
+                            {errors.sdt && <p className='text-[14px] text-[#ff3333]'>{errors.sdt}</p>}
+                        </div>
+
+                        <div className=' w-full flex flex-col items-start gap-[6px]'>
+                            <input className=' w-full lg:w-[466px] p-[14px] font-pop text-[14px] text-[#919EAB] font-normal leading-[26px] outline-none rounded-[8px] bg-bginput' 
+                                placeholder='Ghi chú' type='text' onChange={handleInput} name='note'
+                            />
+                            {errors.note && <p className='text-[14px] text-[#ff3333]'>{errors.note}</p>}
+                        </div>
+
+                        <button className='w-[172px] mt-[22px] lg:mt-[40px] px-[22px] py-[11px] rounded-[8px] bg-primary font-pop text-[15px] font-semibold leading-[26px] text-[#fff]' type='submit'>
                             Gửi thông tin
                         </button>
                     </form>
