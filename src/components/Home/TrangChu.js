@@ -16,6 +16,7 @@ import img3 from '../../img/PictureBody1/img3.svg'
 
 import body2 from '../../img/body2.png'
 
+import h1body4  from '../../img/Body4/h1.png'
 import h2body4 from '../../img/Body4/h2.png'
 import h3body4 from '../../img/Body4/h3.png'
 import h4body4 from '../../img/Body4/h4.png'
@@ -43,6 +44,27 @@ import leftIcon from '../../img/footer/leftIcon.svg'
 import './Home.css'
 
 function Home() {
+
+    let Links = [
+        {name:'Danh thiếp điện tử '},
+        {name:'Website mini'},
+        {name:'Web doanh nghiệp'},
+        {name:'Dịch vụ tư vấn Chuyển đổi số'},
+        {name:'Phòng CNTT thuê ngoài'},
+        {name:'Ứng dụng cho doanh nghiệp SME'},
+        {name:'Ứng dụng cho doanh nghiệp SME'},
+        {name:'Ứng dụng cho doanh nghiệp SME'},
+    ]
+
+    let imgBody5 = [
+        {src: p1},
+        {src: p2},
+        {src: p3},
+        {src: p4},
+        {src: p5},
+        {src: p6},
+    ]
+
     return (
         <div className="w-full">
 
@@ -154,65 +176,46 @@ function Home() {
             </div>
 
             {/* Body 3 */}
-            <div className=' relative w-full h-[781px] bg-be shrink-0 pt-[53px] pl-[151px] pr-[132px] pb-[28px]'>
-                <div className='w-[50%]'>
-                    <h2 className="text-[40px]">
+            <div className='flex flex-col items-center lg:block relative w-full lg:h-[781px] bg-be shrink-0 px-[var(--margin-mobile)] pt-[27px] lg:pt-[53px] lg:pl-[10.486%] lg:pr-[9.1667%] pb-[6px] lg:pb-[28px]'>
+                <div className='w-full flex flex-col gap-[44px] items-center lg:block lg:w-[50%]'>
+                    <h2 className="text-[24px] lg:text-[40px]">
                         <span className="text-primary font-lora font-bold not-italic leading-normal">Hệ sinh thái </span>
                         <span className="text-primary font-lora font-bold not-italic leading-normal">True</span>
                         <span className="text-secondary font-lora font-bold not-italic leading-normal">Connect</span>
                     </h2>
-                    <ul className='h-[434px] mt-[25px] overflow-y-auto scrollbar-thin writing-mode-vertical-rl scrollbar-thumb-[#FF5722] scrollbar-track-[#DFDFDF]'>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
-                        <li className='w-[311px] h-[72px] pl-[24px] flex items-center font-pop text-black text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
-                            Danh thiếp điện tử 
-                        </li>
+                    <ul className='h-[292px] lg:h-[434px] lg:mt-[25px] overflow-y-auto scrollbar-thin writing-mode-vertical-rl scrollbar-thumb-[#FF5722] scrollbar-track-[#DFDFDF]'>
+                        {
+                            Links.map(link => (
+                                <li className='lg:w-[311px] h-[44px] lg:h-[72px] py-[12px] pl-[13px] lg:pl-[24px] flex items-center font-pop text-black text-[14px] lg:text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
+                                    {link.name}
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
-                <img className=' absolute right-[132px] top-[53px] w-[639px] h-[700px]' src={body2}/>
-                <Link className='flex items-center absolute top-[68px] right-[132px] text-[20px] text-secondary font-pop font-semibold' to="/forme">
+                <Link className='flex items-center absolute top-[40%] lg:top-[68px] right-[var(--margin-mobile)] lg:right-[132px] text-[14px] lg:text-[20px] text-secondary font-pop font-semibold' to="/forme">
                     Xem thêm 
-                    <i className="fa fa-chevron-right ml-[8px] mt-[11px] text-[16px] w-[24px] h-[24px] font-normal"></i>
+                    <i className="fa fa-chevron-right ml-[8px] mt-[8px] lg:mt-[11px] text-[14px] lg:text-[16px] w-[20px] lg:w-[24px] h-[20px] lg:h-[24px] font-normal"></i>
                 </Link>
+                <img className=' lg:absolute lg:right-[132px] lg:top-[53px] w-[full] lg:w-[639px] aspect-square lg:h-[700px]' src={body2} alt='body2'/>
             </div>
 
             {/* Body 4 */}
-            <div className='px-[144px] pt-[120px] flex flex-col gap-[80px]'>
-                <div className='flex justify-between'>
-                    <div className='w-[460px] flex flex-col items-start gap-[24px]'>
-                        <h2 className="text-[40px] text-primary font-lora font-bold not-italic leading-normal">Bài viết mới nhất</h2>
-                        <p className=' text-[16px] font-pop text-[#637381] font-normal leading-7'>Nơi những khách hàng của TrueConnect cập nhật những tin tức mới nhất về thị trường công nghệ</p>
+            <div className=' relative w-full px-[var(--margin-mobile)] lg:px-[var(--margin-desktop)] pt-[22px] lg:pt-[120px] pb-[40px] lg:pb-0 flex flex-col gap-[22px] lg:gap-[80px]'>
+                <div className='w-full flex justify-between'>
+                    <div className='w-full lg:w-[460px] text-center lg:text-start flex flex-col items-center lg:items-start gap-[24px]'>
+                        <p className='lg:hidden font-pop text-[12px] font-semibold leading-[20px] uppercase text-[#919EAB]'>Blog</p>
+                        <h2 className="text-[24px] lg:text-[40px] text-primary font-lora font-bold not-italic leading-normal">Bài viết mới nhất</h2>
+                        <p className='text-[14px] lg:text-[16px] font-pop text-[#637381] font-normal leading-7'>Nơi những khách hàng của TrueConnect cập nhật những tin tức mới nhất về thị trường công nghệ</p>
                     </div>
-                    <Link className='flex items-center text-[20px] text-secondary font-pop font-semibold' to="/forme">
+                    <Link className=' absolute lg:static flex items-center bottom-0 right-[var(--margin-mobile)] text-[14px] lg:text-[20px] text-secondary font-pop font-normal lg:font-semibold' to="/forme">
                         Xem thêm 
-                        <i className="fa fa-chevron-right ml-[8px] mt-[11px] text-[16px] w-[24px] h-[24px] font-normal"></i>
+                        <i className="fa fa-chevron-right ml-[8px] mt-[11px] text-[14px] lg:text-[16px] w-[24px] h-[24px] font-normal"></i>
                     </Link>
                 </div>
 
-                <div className='flex gap-[32px]'>
-                    <div className='pic1 relative'>
+                <div className='w-full flex flex-col lg:flex-row gap-[22px] lg:gap-[32px]'>
+                    <div className=' hidden lg:block pic1 relative'>
                         <div className=' absolute bottom-0 p-[40px] w-full flex flex-col items-start gap-[16px] text-[#fff]'>
                             <div className='flex gap-[8px] items-center'>
                                 <span className=' font-pop text-[12px] font-normal leading-5'>
@@ -233,11 +236,32 @@ function Home() {
                             </p>
                         </div>
                     </div>
-                    <div className=' grid grid-cols-2 gap-[32px]'>
-                       <div className='flex flex-col gap-[32px]'>
-                            <div className='flex flex-col gap-[16px]'>
-                                <img className=' w-[264px] h-[264px] object-cover rounded-[16px]' src={h2body4}/>
-                                <div className='flex flex-col gap-[8px] items-start self-stretch'>
+                    
+                    <div className='flex lg:hidden lg:flex-col gap-[16px]'>
+                        <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[264px] object-cover rounded-[16px]' src={h1body4} alt='h1body'/>
+                        <div className='flex flex-col-reverse lg:flex-col gap-[8px] justify-end lg:justify-normal items-start self-stretch'>
+                            <div className='flex gap-[8px] items-center'>
+                                <span className=' font-pop text-[12px] font-normal leading-5'>
+                                    24 May 2019
+                                </span>
+                                <span className='mt-[-9px] font-pop text-[16px] font-semibold leading-5'>
+                                    .
+                                </span>
+                                <span className=' font-pop text-[12px] font-normal leading-5'>
+                                    8 mins
+                                </span>
+                            </div>
+                            <div className=' font-bar text-[17px] lg:text-[18px] font-semibold leading-7'>
+                                Apply These 7 Secret Techniques To Improve Event
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className=' grid grid-cols-1 lg:grid-cols-2 gap-[22px] lg:gap-[32px]'>
+                       <div className='flex flex-col gap-[22px] lg:gap-[32px]'>
+                            <div className='flex lg:flex-col gap-[16px]'>
+                                <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[264px] object-cover rounded-[16px]' src={h2body4} alt=''/>
+                                <div className='flex flex-col-reverse lg:flex-col gap-[8px] justify-end lg:justify-normal items-start self-stretch'>
                                     <div className='flex gap-[8px] items-center'>
                                         <span className=' font-pop text-[12px] font-normal leading-5'>
                                             24 May 2019
@@ -249,15 +273,15 @@ function Home() {
                                             8 mins
                                         </span>
                                     </div>
-                                    <div className=' font-bar text-[18px] font-semibold leading-7'>
+                                    <div className=' font-bar text-[17px] lg:text-[18px] font-semibold leading-7'>
                                         Apply These 7 Secret Techniques To Improve Event
                                     </div>
                                 </div>
                             </div>
     
-                            <div className='flex flex-col gap-[16px]'>
-                                <img className=' w-[264px] h-[198px] object-cover rounded-[16px]' src={h3body4}/>
-                                <div className='flex flex-col gap-[8px] items-start self-stretch'>
+                            <div className='flex lg:flex-col gap-[16px]'>
+                                <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[264px] object-cover rounded-[16px]' src={h3body4} alt=''/>
+                                <div className='flex flex-col-reverse lg:flex-col gap-[8px] justify-end lg:justify-normal items-start self-stretch'>
                                     <div className='flex gap-[8px] items-center'>
                                         <span className=' font-pop text-[12px] font-normal leading-5'>
                                             24 May 2019
@@ -276,10 +300,10 @@ function Home() {
                             </div>
                        </div>
 
-                        <div className='flex flex-col gap-[32px]'>
-                            <div className='flex flex-col gap-[16px]'>
-                                <img className=' w-[264px] h-[198px] object-cover rounded-[16px]' src={h4body4}/>
-                                <div className='flex flex-col gap-[8px] items-start self-stretch'>
+                        <div className='flex flex-col gap-[22px] lg:gap-[32px]'>
+                            <div className='flex lg:flex-col gap-[16px]'>
+                                <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[264px] object-cover rounded-[16px]' src={h4body4} alt=''/>
+                                <div className='flex flex-col-reverse lg:flex-col gap-[8px] justify-end lg:justify-normal items-start self-stretch'>
                                     <div className='flex gap-[8px] items-center'>
                                         <span className=' font-pop text-[12px] font-normal leading-5'>
                                             24 May 2019
@@ -291,15 +315,15 @@ function Home() {
                                             8 mins
                                         </span>
                                     </div>
-                                    <div className=' font-bar text-[18px] font-semibold leading-7'>
+                                    <div className=' font-bar text-[17px] lg:text-[18px] font-semibold leading-7'>
                                         Knowing These 7 Secrets Will Make Your Event Look Amazing
                                     </div>
                                 </div>
                             </div>
     
-                            <div className='flex flex-col gap-[16px]'>
-                                <img className=' w-[264px] h-[264px] object-cover rounded-[16px]' src={h5body4}/>
-                                <div className='flex flex-col gap-[8px] items-start self-stretch'>
+                            <div className='flex lg:flex-col gap-[16px]'>
+                                <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[264px] object-cover rounded-[16px]' src={h5body4} alt=''/>
+                                <div className='flex flex-col-reverse lg:flex-col gap-[8px] justify-end lg:justify-normal items-start self-stretch'>
                                     <div className='flex gap-[8px] items-center'>
                                         <span className=' font-pop text-[12px] font-normal leading-5'>
                                             24 May 2019
@@ -311,7 +335,7 @@ function Home() {
                                             8 mins
                                         </span>
                                     </div>
-                                    <div className=' font-bar text-[18px] font-semibold leading-7'>
+                                    <div className=' font-bar text-[17px] lg:text-[18px] font-semibold leading-7'>
                                         Don't Waste Time! 7 Facts Until You Reach Your Event
                                     </div>
                                 </div>
@@ -321,17 +345,16 @@ function Home() {
                 </div>
             </div>
 
-            <div className='pb-[30px] bg-[#f1f1f1]'>
+            <div className='pt-[47px] lg:pt-[0] pb-[22px] lg:pb-[30px] bg-[#fff] lg:bg-[#f1f1f1]'>
                 {/* Body 5 */}
-                <div className='flex flex-col gap-[56px] pt-[146px] pb-[100px] bg-[#f1f1f1]'>
-                    <h2 className="text-[40px] text-center text-primary font-lora font-bold not-italic leading-normal">Đối tác của chúng tôi?</h2>
-                    <div className=' flex justify-start gap-[40px] items-center'>
-                        <img className=' object-cover shrink-0 w-[206.351px] h-[120.52px]' src={p1}/>
-                        <img className=' object-cover shrink-0 w-[255.706px] h-[62.585px]' src={p2}/>
-                        <img className=' object-cover shrink-0 w-[217.934px] h-[75.69px]' src={p3}/>
-                        <img className=' object-cover shrink-0 w-[189.729px] h-[139.298px]' src={p4}/>
-                        <img className=' object-cover shrink-0 w-[103.749px] h-[103.749px]' src={p5}/>
-                        <img className=' object-cover shrink-0 w-[170.149px] h-[161.566px]' src={p6}/>
+                <div className='flex flex-col gap-[22px] lg:gap-[56px] px-[var(--margin-mobile)] lg:px-0 py-[15px] lg:pt-[146px] lg:pb-[100px] bg-[#fff] lg:bg-[#f1f1f1]'>
+                    <h2 className=" text-[24px] lg:text-[40px] text-center text-primary font-lora font-semibold lg:font-bold not-italic leading-normal">Đối tác của chúng tôi?</h2>
+                    <div className=' flex justify-start gap-[40px] items-center overflow-x-auto scrollbar-thin writing-mode-vertical-rl scrollbar-thumb-transparent snap-always scrollbar-track-transparent'>
+                        {
+                            imgBody5.map((img) => (
+                                <img className=' object-cover shrink-0 max-w-full h-auto ' src={img.src} alt=''/>
+                            ))
+                        }
                     </div>
                 </div>
     
