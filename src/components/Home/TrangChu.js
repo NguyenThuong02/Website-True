@@ -41,7 +41,7 @@ import tiktokIcon from '../../img/footer/icon-06 1.png'
 import leftIcon from '../../img/footer/leftIcon.svg'
 
 import Validation from './Validation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import './Home.css'
 
@@ -86,8 +86,9 @@ function Home() {
         sdt: '',
         note: ''
     })
-
     const [errors, setErrors] = useState({})
+    const [data, setData] = useState([])
+    const [filterData, setFilterData] = useState([])
 
     const handleInput = (e) => {
         const newObj = {...values, [e.target.name]: e.target.value}
@@ -99,12 +100,30 @@ function Home() {
         setErrors(Validation(values));
     }
 
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => res.json())
+            .then(data => {
+                setFilterData(data);
+            })
+            .catch(err =>  console.log(err))
+    },[])
+
+
+    const handleSearch = (value) => {
+        const res = filterData.filter(f => f.name.toLowerCase().includes(value))
+        setData(res);
+        if(value==='') {
+            setData([])
+        }
+    }
+
     return (
         <div className="w-full">
 
             {/* Body header */}
-            <div className="h-[880px] w-full bg-be shrink-0">
-                <div className="absolute flex flex-col pt-[96px] px-[var(--margin-mobile)] items-center lg:flex-row lg:justify-center lg:pt-[196px] lg:px-[var(--margin-desktop)] lg:gap-[122px]">
+            <div className="w-full pb-[40px] bg-be shrink-0">
+                <div className="flex flex-col pt-[96px] px-[var(--margin-mobile)] items-center lg:flex-row lg:justify-center lg:pt-[196px] lg:px-[var(--margin-desktop)] lg:gap-[122px]">
                     <div className='lg:flex-1'>
                         
                         <div className='flex flex-col pb-[22px] lg:pb-[48px] items-center lg:items-start gap-[22px] lg:gap-6'>
@@ -119,12 +138,22 @@ function Home() {
                         
                         <form className='flex relative flex-col lg:flex-row p-[8px] lg:items-center self-stretch rounded-[9px] gap-[8px] lg:gap-0 bg-[#fff] shadow-input'>
                             <img className=' absolute lg:hidden left-[26px] top-[18px] w-[24px] h-[24px]' src={search1} alt='search'/>
-                            <input className='  flex py-[11px] pl-[48px] pr-[14px] lg:px-[14px] h-12 flex-1 items-center border-transparent border-0 outline-none text-[14px] font-pop leading-[26px] font-normal' placeholder='Job title, keywords...'/>
+                            <input className='  flex py-[11px] pl-[48px] pr-[14px] lg:px-[14px] h-12 flex-1 items-center border-transparent border-0 outline-none text-[14px] font-pop leading-[26px] font-normal' 
+                                placeholder='Job title, keywords...' type='text'
+                                onChange={e => handleSearch(e.target.value)}
+                            />
                             <button className='flex justify-center gap-[8px] lg:items-start p-[12px] rounded-[8px] bg-[#FA541C]'>
                                 <img src={search} alt='search'/>
                                 <span className=' font-pop text-[15px] text-[#fff] font-semibold leading-[26px] lg:hidden'>Search</span>
                             </button>
                         </form>
+                        <div className='lg:w-full left-[var(--margin-mobile)] right-[var(--margin-mobile)] absolute lg:static mt-[10px] overflow-hidden bg-[#fff] rounded-[9px] shadow-input'>
+                            {data.map((item, index) => (
+                                <div className='px-[14px] py-[10px] text-[14px] leading-[26px] hover:bg-[#ccc] hover:cursor-pointer' key={index}>
+                                    {item.name}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className='w-[86.6667%] mt-[10px] aspect-square lg:w-[564px] lg:h-[564px]'>
                         <img src={human} alt='img'/>
