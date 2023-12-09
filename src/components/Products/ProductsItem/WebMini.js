@@ -1,5 +1,5 @@
 import slide from '../../../img/Product/WebMini/slide.png'
-import h1body1 from '../../../img/Product/WebMini/h1body1.png'
+// import h1body1 from '../../../img/Product/WebMini/h1body1.png'
 import h2body1 from '../../../img/Product/WebMini/h2body1.png'
 
 import item1 from '../../../img/Product/WebMini/item1.png'
@@ -140,9 +140,11 @@ function WebMini() {
                                         className='lg:max-h-[45px] font-jos lg:text-[24px] text-[#525560] font-normal pb-[50px]' 
                                     >
                                         <td className="pb-[10px] text-start">{item.name}</td>
-                                        <div className='flex justify-center pb-[10px]'>
-                                            <img src={item.iconF} alt='' className='lg:w-[45px] lg:h-[45px] max-w-full h-auto' />
-                                        </div>
+                                        <td className=' text-center pb-[10px]'>
+                                            <div className='flex justify-center'>
+                                                <img src={item.iconF} alt='' className='lg:w-[45px] lg:h-[45px] max-w-full h-auto' />
+                                            </div>
+                                        </td>
                                         <td className=' text-center pb-[10px]'>
                                             <div className='flex justify-center'>
                                                 <img src={item.iconR} alt='' className='lg:w-[45px] lg:h-[45px] max-w-full h-auto' />

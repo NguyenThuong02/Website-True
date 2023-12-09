@@ -228,8 +228,8 @@ function Home() {
                     </h2>
                     <ul className='h-[292px] lg:h-[434px] lg:mt-[25px] overflow-y-auto scrollbar-thin writing-mode-vertical-rl scrollbar-thumb-[#FF5722] scrollbar-track-[#DFDFDF]'>
                         {
-                            Links.map(link => (
-                                <li className='lg:w-[311px] h-[44px] lg:h-[72px] py-[12px] pl-[13px] lg:pl-[24px] flex items-center font-pop text-black text-[14px] lg:text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
+                            Links.map((link, index) => (
+                                <li key={index} className='lg:w-[311px] h-[44px] lg:h-[72px] py-[12px] pl-[13px] lg:pl-[24px] flex items-center font-pop text-black text-[14px] lg:text-[20px] font-semibold hover:text-[#fff] hover:bg-[#FF5722]'>
                                     {link.name}
                                 </li>
                             ))
@@ -394,8 +394,8 @@ function Home() {
                     <h2 className=" text-[24px] lg:text-[40px] text-center text-primary font-lora font-semibold lg:font-bold not-italic leading-normal">Đối tác của chúng tôi?</h2>
                     <div className=' flex justify-start gap-[40px] items-center overflow-x-auto scrollbar-thin writing-mode-vertical-rl scrollbar-thumb-transparent snap-always scrollbar-track-transparent'>
                         {
-                            imgBody5.map((img) => (
-                                <img className=' object-cover shrink-0 max-w-full h-auto ' src={img.src} alt=''/>
+                            imgBody5.map((img, index) => (
+                                <img key={index} className=' object-cover shrink-0 max-w-full h-auto ' src={img.src} alt=''/>
                             ))
                         }
                     </div>

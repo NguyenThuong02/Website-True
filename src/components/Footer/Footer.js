@@ -60,8 +60,8 @@ function Footer() {
                     </li>
                     <div className='flex lg:hidden ml-[50%] mt-[15px] mb-[30px] translate-x-[-50%] gap-[6px] lg:gap-[10px]'>
                         {
-                            logoNetwork.map(logo => (
-                                <a href={logo.href}>
+                            logoNetwork.map((logo, index) => (
+                                <a href={logo.href} key={index}>
                                     <img className='w-[34px] h-[34px] shrink-0' src={logo.src} alt=''/>
                                 </a>
                             ))
@@ -97,8 +97,8 @@ function Footer() {
                 <div className=' w-full flex flex-col items-center lg:flex-row justify-between gap-[10px]'>
                     <div className='hidden lg:flex gap-[6px] lg:gap-[10px]'>
                         {
-                            logoNetwork.map(logo => (
-                                <a href={logo.href}>
+                            logoNetwork.map((logo, index) => (
+                                <a href={logo.href} key={index}>
                                     <img className='w-[50px] h-[50px] shrink-0' src={logo.src} alt=''/>
                                 </a>
                             ))
@@ -114,8 +114,8 @@ function Footer() {
                 </div>
                 <div className='lg:hidden flex flex-wrap justify-center gap-x-[12px] gap-y-0'>
                     {
-                        LinkFooter.map(link => (
-                            <Link className='font-pop text-[10px] text-[#B4B4B4] font-normal leading-[24px]' to={link.link}>{link.name}</Link>
+                        LinkFooter.map((link, index) => (
+                            <Link className='font-pop text-[10px] text-[#B4B4B4] font-normal leading-[24px]' to={link.link} key={index}>{link.name}</Link>
                         ))
                     }
                 </div>

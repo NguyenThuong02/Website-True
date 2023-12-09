@@ -100,8 +100,8 @@ function Header() {
                 <Navbar.Collapse className={nav ? 'lg:hidden ease-in fixed left-0 top-0' : 'lg:hidden ease-in absolute top-0 h-screen left-[-100%] z-50'} id="basic-navbar-nav" >
                     <Nav className={nav ? ' fixed flex flex-col bg-slate-600 w-full h-screen' : 'top-0 h-screen left-[-100%] z-10'}>
                         {
-                            Links.map((link)=>(
-                                <NavLink className='nav-link font-semibold' to={link.link}>{link.name}</NavLink>
+                            Links.map((link, index)=>(
+                                <NavLink className='nav-link font-semibold' to={link.link} key={index}>{link.name}</NavLink>
                             ))
                         }
                     </Nav>
@@ -109,8 +109,8 @@ function Header() {
                 <Navbar.Collapse className='hidden lg:block' id="basic-navbar-nav" >
                     <Nav className='lg:me-auto lg:flex lg:justify-between lg:gap-[50px] items-center'>
                         {
-                            Links.map((link)=>(
-                                <NavLink className={color ? 'nav-link font-semibold text-[#fff] hover:opacity-[70%]' : 'nav-link font-semibold hover:opacity-[70%]'} to={link.link}>{link.name}</NavLink>
+                            Links.map((link, index)=>(
+                                <NavLink key={index} className={color ? 'nav-link font-semibold text-[#fff] hover:opacity-[70%]' : 'nav-link font-semibold hover:opacity-[70%]'} to={link.link}>{link.name}</NavLink>
                             ))
                         }
                     </Nav>
