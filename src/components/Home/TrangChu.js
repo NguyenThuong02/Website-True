@@ -301,8 +301,8 @@ function Home() {
                     </div>
                     
                     <div className='flex lg:hidden lg:flex-col gap-[16px]'>
-                        <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[264px] object-cover rounded-[16px]' src={h1body4} alt='h1body'/>
-                        <div className='flex flex-col-reverse lg:flex-col gap-[8px] justify-end lg:justify-normal items-start self-stretch'>
+                        <img className='w-[80px] h-[80px] object-cover rounded-[16px]' src={h1body4} alt='h1body'/>
+                        <div className='flex flex-col-reverse gap-[8px] justify-end items-start self-stretch'>
                             <div className='flex gap-[8px] items-center'>
                                 <span className=' font-pop text-[12px] font-normal leading-5'>
                                     24 May 2019
@@ -314,7 +314,7 @@ function Home() {
                                     8 mins
                                 </span>
                             </div>
-                            <div className=' font-bar text-[17px] lg:text-[18px] font-semibold leading-7'>
+                            <div className=' font-bar text-[17px] font-semibold leading-7'>
                                 Apply These 7 Secret Techniques To Improve Event
                             </div>
                         </div>
@@ -343,7 +343,7 @@ function Home() {
                             </div>
     
                             <div className='flex lg:flex-col gap-[16px]'>
-                                <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[264px] object-cover rounded-[16px]' src={h3body4} alt=''/>
+                                <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[198px] object-cover rounded-[16px]' src={h3body4} alt=''/>
                                 <div className='flex flex-col-reverse lg:flex-col gap-[8px] justify-end lg:justify-normal items-start self-stretch'>
                                     <div className='flex gap-[8px] items-center'>
                                         <span className=' font-pop text-[12px] font-normal leading-5'>
@@ -365,7 +365,7 @@ function Home() {
 
                         <div className='flex flex-col gap-[22px] lg:gap-[32px]'>
                             <div className='flex lg:flex-col gap-[16px]'>
-                                <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[264px] object-cover rounded-[16px]' src={h4body4} alt=''/>
+                                <img className='w-[80px] h-[80px] lg:w-[264px] lg:h-[198px] object-cover rounded-[16px]' src={h4body4} alt=''/>
                                 <div className='flex flex-col-reverse lg:flex-col gap-[8px] justify-end lg:justify-normal items-start self-stretch'>
                                     <div className='flex gap-[8px] items-center'>
                                         <span className=' font-pop text-[12px] font-normal leading-5'>
