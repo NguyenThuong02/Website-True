@@ -24,6 +24,7 @@ module.exports = {
       'lex': ['Lexend', 'sans-serif'],
       'bar': ['Barlow', 'sans-serif'],
       'rale': ['Raleway', 'sans-serif'],
+      'jos': ['Josefin Sans', 'sans-serif'],
     },
   },
   plugins: [
