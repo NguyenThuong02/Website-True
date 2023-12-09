@@ -14,7 +14,8 @@ module.exports = {
       },
       boxShadow: {
         'input': '-16px 16px 56px -8px rgba(145, 158, 171, 0.16)',
-        'itemBody1': '0px 10px 20px 0px rgba(0, 95, 183, 0.15)'
+        'itemBody1': '0px 10px 20px 0px rgba(0, 95, 183, 0.15)',
+        'box': '10px 10px 20px -4px rgba(0, 95, 183, 0.15)',
       },
     },
     fontFamily: {
@@ -22,6 +23,7 @@ module.exports = {
       'lora' : ['Lora', 'serif'],
       'lex': ['Lexend', 'sans-serif'],
       'bar': ['Barlow', 'sans-serif'],
+      'rale': ['Raleway', 'sans-serif'],
     },
   },
   plugins: [

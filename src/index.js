@@ -10,6 +10,7 @@ import Product from './components/Products/Product'
 import New from './components/News/New'
 import Experience from './components/Experience/Experience'
 import Relationship from './components/Relationship/Relationship'
+import WebMini from './components/Products/ProductsItem/WebMini';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
           <Route path="/experience" element={<Experience />}/>
           <Route path="/relationship" element={<Relationship />}/>
           <Route index element={<Home />}/>
+          <Route path="/webmini" element={<WebMini />}/>
         </Route>
       </Routes>
     </BrowserRouter>
