@@ -197,9 +197,9 @@ function Home() {
                         </div>
                         
                         <div className='flex-1 grid grid-cols-2 gap-[18px]'>
-                            <img className='col-span-2 w-full object-cover rounded-[21px]' src={h1}/>
-                            <img className='row-span-1 h-[208px] object-cover rounded-[21px]' src={h2}/>
-                            <img className='row-span-1 h-[208px] bg-[#ccc] object-cover rounded-[21px]' src={h3}/>
+                            <img className='col-span-2 w-full object-cover rounded-[21px]' src={h1} alt=''/>
+                            <img className='row-span-1 h-[208px] object-cover rounded-[21px]' src={h2} alt=''/>
+                            <img className='row-span-1 h-[208px] bg-[#ccc] object-cover rounded-[21px]' src={h3} alt=''/>
                         </div>
                    </div>
     
