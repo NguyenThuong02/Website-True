@@ -8,12 +8,22 @@ import item3 from '../../../img/Product/WebMini/item3.png'
 import video from '../../../img/Product/WebMini/m1.mp4'
 import iconX from '../../../img/Product/WebMini/iconX.svg'
 import iconY from '../../../img/Product/WebMini/iconY.svg'
+import iconAdd from '../../../img/Product/WebMini/iconAdd.svg'
+import body5 from '../../../img/Product/WebMini/body5.png'
+import body6 from '../../../img/Product/WebMini/body6.svg'
+import plane from '../../../img/Product/WebMini/plane.svg'
+import rocket from '../../../img/Product/WebMini/Rocket.svg'
+import rocket2 from '../../../img/Product/WebMini/Rocket2.svg'
+
+
+
 
 import { ReactComponent as IconStar } from "../../../img/Product/WebMini/iconStar.svg";
 
 import timelineElements from './timeLineElements';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import "react-vertical-timeline-component/style.min.css"
+import Footer from '../../Footer/Footer'
 
 
 
@@ -36,6 +46,34 @@ function WebMini() {
         {name: 'Cập nhật thông tin trạng thái sản phẩm', iconF:iconX, iconR:iconY},
         {name: 'Quản lý bài đăng/ Quản lý đơn hàng', iconF:iconX, iconR:iconY},
         {name: 'Hỗ trợ xây dựng mạng lưới khách hàng,mạng lưới cộng đồng', iconF:iconX, iconR:iconY},
+    ]
+
+    let Questions = [
+        {text:'Chia sẻ Webmini có bị mất dữ liệu không?', icon:iconAdd},
+        {text:'Khi đã tạo webmini, tôi có được chỉnh sửa không?', icon:iconAdd},
+        {text:'Website mini có gì khác so với website thông thường?', icon:iconAdd},
+        {text:'Có thể đổi gói webmini khi đã mua gói trước đó rồi không?', icon:iconAdd},
+    ]
+
+    let List1 = [
+        {text: '1 Website'},
+        {text: '1 Danh thiếp điện tử'},
+        {text: 'Phân loại sản phẩm theo 2 nhóm'},
+    ]
+
+    let List2 = [
+        {text: 'Auto update mode'},
+        {text: 'Online operator 24/7'},
+        {text: 'International posting'},
+        {text: 'Unique newsletters'},
+    ]
+
+    let List3 = [
+        {text: 'Auto update mode'},
+        {text: 'Online operator 24/7'},
+        {text: 'International posting'},
+        {text: 'Unique newsletters'},
+        {text: '20 Design templates'},
     ]
 
     return (
@@ -160,9 +198,119 @@ function WebMini() {
                 </div>
 
                 {/* Body 5: */}
-                <div className='lg:px-[10%] lg:pt-[80px] lg:pb-[40px]'>
-
+                <div className='lg:px-[10%] lg:pt-[80px] lg:pb-[40px] flex lg:justify-between lg:gap-[122px]'>
+                    <div className='flex flex-col lg:flex-1 items-start'>
+                        <h1 className=' lg:mb-[40px] font-lora lg:text-[40px] font-bold text-primary'>Giải đáp thắc mắc</h1>
+                        <div className='pb-[20px] border-b-[1px]'>
+                            <h2 className='py-[20px] text-[18px] font-bar font-semibold leading-[28px]'>Webmini là gì?</h2>
+                            <p className=' font-pop text-[14px] font-normal leading-[25px] text-justify'>
+                                Giống 1 website thu nhỏ, với các chức năng cần có tương tự như các trang website hiện có trên thị trường. Webmini cung cấp các tác vụ và giải pháp giúp người sử dụng có thể tự tạo trang web cho riêng mình, với các thao tác bằng tay, đơn giản và được thực hiện ngay trên chính thiết bị di động của mình. Việc này nhằm đơn giản hóa hoạt động thương mại của khách hàng, đồng thời giúp người mua có thể nhanh chóng tiếp cận mong muốn và thực hiện việc mua hàng dễ dàng hơn qua online.
+                            </p>
+                        </div>
+                        <div className='w-full'>
+                            {
+                                Questions.map((item, index) => (
+                                    <div className='flex border-b-[1px] py-[20px] gap-[24px] justify-between' key={index}>
+                                        <p className=' font-bar text-[18px] font-semibold leading-[28px]'>{item.text}</p>
+                                        <img className='w-[24px] h-[24px]' src={item.icon} alt=''/>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                    <div className='lg:w-[32.611%] flex items-center justify-center'>
+                        <img className='w-full' src={body5} alt=''/>
+                    </div>
                 </div>
+
+                {/* Body 6: Bảng giá dịch vụ */}
+                <div className=' w-full lg:px-[10%] lg:py-[50px] flex flex-col lg:justify-start bg-be'>
+                    <div className='flex flex-col items-start lg:mb-[50px]'>
+                        <h1 className='pt-[16px] pb-[24px] lg:mb-[40px] font-lora lg:text-[40px] font-bold text-primary'>Bảng giá dịch vụ</h1>
+                        <p className=' text-center lg:text-start text-[#637381] text-[14px] lg:text-[16px] leading-[28px]'>
+                            Choose the perfect plan for your needs. Always flexible to grow
+                        </p>
+                    </div>
+                    <div className='w-full inline-flex gap-[32px] items-center justify-between'>
+                        <div className='lg:px-[40px] lg:pt-[64px] lg:pb-[40px] flex flex-col gap-[40px] bg-[#fff] rounded-[16px] shadow-itemMini'>
+                            <div className='flex flex-col gap-[40px]'>
+                                <div className=' relative flex flex-col items-start gap-[16px]'>
+                                    <h2 className=' font-bar font-semibold leading-[36px] text-primary'>Webmini 1</h2>
+                                    <div>
+                                        <span className=' font-bar text-[36px] font-bold leading-[54px] text-[#212B36]'>1.000.000</span>
+                                        <span className=' font-bar text-[20px] font-semibold leading-[30px] text-[#919EAB]'>/năm</span>
+                                    </div>
+                                    <img className=' absolute top-0 right-0' src={plane} alt=''/>
+                                </div>
+                                <div className='flex w-[282px] flex-col items-start gap-[16px]'>
+                                    {
+                                        List1.map((item, index) => (
+                                            <div className='flex justify-start items-center gap-[12px]' key={index}>
+                                                <img className='w-[20px] h-[20px]' src={body6} alt=''/>
+                                                <p className=' font-pop text-[14px] font-normal leading-[26px]'>{item.text}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div> 
+                            <button className='px-[22px] py-[11px] bg-[#FF0054] text-[#fff] font-pop text-[15px] font-semibold leading-[26px] rounded-[8px]'>
+                                Nâng cấp
+                            </button> 
+                        </div>
+                        <div className='lg:px-[40px] lg:pt-[64px] lg:pb-[40px] flex flex-col gap-[40px] bg-[#fff] rounded-[16px] shadow-itemMini'>
+                            <div className='flex flex-col gap-[40px]'>
+                                <div className=' relative flex flex-col items-start gap-[16px]'>
+                                    <h2 className=' font-bar font-semibold leading-[36px] text-primary'>Webmini 1</h2>
+                                    <div>
+                                        <span className=' font-bar text-[36px] font-bold leading-[54px] text-[#212B36]'>1.000.000</span>
+                                        <span className=' font-bar text-[20px] font-semibold leading-[30px] text-[#919EAB]'>/năm</span>
+                                    </div>
+                                    <img className=' absolute top-0 right-0' src={plane} alt=''/>
+                                </div>
+                                <div className='flex w-[282px] flex-col items-start gap-[16px]'>
+                                    {
+                                        List2.map((item, index) => (
+                                            <div className='flex justify-start items-center gap-[12px]' key={index}>
+                                                <img className='w-[20px] h-[20px]' src={body6} alt=''/>
+                                                <p className=' font-pop text-[14px] font-normal leading-[26px]'>{item.text}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div> 
+                            <button className='px-[22px] py-[11px] bg-[#FF0054] text-[#fff] font-pop text-[15px] font-semibold leading-[26px] rounded-[8px]'>
+                                Nâng cấp
+                            </button> 
+                        </div>
+                        <div className='lg:px-[40px] lg:pt-[64px] lg:pb-[40px] flex flex-col gap-[40px] bg-[#fff] rounded-[16px] shadow-itemMini'>
+                            <div className='flex flex-col gap-[40px]'>
+                                <div className=' relative flex flex-col items-start gap-[16px]'>
+                                    <h2 className=' font-bar font-semibold leading-[36px] text-primary'>Webmini 1</h2>
+                                    <div>
+                                        <span className=' font-bar text-[36px] font-bold leading-[54px] text-[#212B36]'>1.000.000</span>
+                                        <span className=' font-bar text-[20px] font-semibold leading-[30px] text-[#919EAB]'>/năm</span>
+                                    </div>
+                                    <img className=' absolute top-0 right-0' src={plane} alt=''/>
+                                </div>
+                                <div className='flex w-[282px] flex-col items-start gap-[16px]'>
+                                    {
+                                        List3.map((item, index) => (
+                                            <div className='flex justify-start items-center gap-[12px]' key={index}>
+                                                <img className='w-[20px] h-[20px]' src={body6} alt=''/>
+                                                <p className=' font-pop text-[14px] font-normal leading-[26px]'>{item.text}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div> 
+                            <button className='px-[22px] py-[11px] bg-[#FF0054] text-[#fff] font-pop text-[15px] font-semibold leading-[26px] rounded-[8px]'>
+                                Nâng cấp
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+
+                <Footer />
             </div>
         </div>
     );

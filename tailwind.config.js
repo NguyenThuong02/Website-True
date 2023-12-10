@@ -16,6 +16,7 @@ module.exports = {
         'input': '-16px 16px 56px -8px rgba(145, 158, 171, 0.16)',
         'itemBody1': '0px 10px 20px 0px rgba(0, 95, 183, 0.15)',
         'box': '10px 10px 20px -4px rgba(0, 95, 183, 0.15)',
+        'itemMini': '4px 4px 24px 0px rgba(145, 158, 171, 0.08)',
       },
     },
     fontFamily: {
