@@ -14,9 +14,12 @@ import body6 from '../../../img/Product/WebMini/body6.svg'
 import plane from '../../../img/Product/WebMini/plane.svg'
 import rocket from '../../../img/Product/WebMini/Rocket.svg'
 import rocket2 from '../../../img/Product/WebMini/Rocket2.svg'
+import avt from '../../../img/Product/WebMini/avt.JPG'
 
-
-
+import { FaPhoneVolume, FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { MdLocationPin } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa";
 
 import { ReactComponent as IconStar } from "../../../img/Product/WebMini/iconStar.svg";
 
@@ -36,8 +39,10 @@ function WebMini() {
         {img:item3},
     ]
 
+    
     let iconStar = {background: "#FA541C", color: '#fff'};
 
+    // List Differ (Body 4)
     let List = [
         {name: 'Xây dựng website bán hàng trực tuyến', iconF:iconX, iconR:iconY},
         {name: 'Phân loại thông tin/sản phẩm theo danh mục', iconF:iconX, iconR:iconY},
@@ -48,6 +53,7 @@ function WebMini() {
         {name: 'Hỗ trợ xây dựng mạng lưới khách hàng,mạng lưới cộng đồng', iconF:iconX, iconR:iconY},
     ]
 
+    // Body 5
     let Questions = [
         {text:'Chia sẻ Webmini có bị mất dữ liệu không?', icon:iconAdd},
         {text:'Khi đã tạo webmini, tôi có được chỉnh sửa không?', icon:iconAdd},
@@ -55,6 +61,7 @@ function WebMini() {
         {text:'Có thể đổi gói webmini khi đã mua gói trước đó rồi không?', icon:iconAdd},
     ]
 
+    // List character item (body 6)
     let List1 = [
         {text: '1 Website'},
         {text: '1 Danh thiếp điện tử'},
@@ -74,6 +81,58 @@ function WebMini() {
         {text: 'International posting'},
         {text: 'Unique newsletters'},
         {text: '20 Design templates'},
+    ]
+
+    // List items cost (Body 6)
+    let ItemCost = [
+        {
+            name: 'Webmini 1', cost: '1.000.000', pre: '/năm', list: List1, logo:plane
+        },
+        {
+            name: 'Webmini 2', cost: '2.000.000', pre: '/năm', list: List2, logo:rocket
+        },
+        {
+            name: 'Webmini 3', cost: '5.000.000', pre: '/năm', list: List3, logo:rocket2
+        },
+    ]
+
+    // List Rate clients (Body 7) 
+    let RateList = [
+        {
+            video:video, name: 'Phạm Thanh Bình', info:'UI Designer at Google', avt: avt
+        },
+        {
+            video:video, name: 'Nguyễn Thanh Thưởng', info:'UI Designer at Google', avt: avt
+        },
+        {
+            video:video, name: 'Phạm Thanh Huyền', info:'UI Designer at Google', avt: avt
+        },
+    ]
+
+    // List Contact Info (Body 8)
+    let contacts = [
+        {
+            icon: FaPhoneVolume, 
+            name: 'Hotline',
+            content: '0888 136 622',
+        },
+        {
+            icon: IoMdMail, 
+            name: 'Gửi Email',
+            content: 'dvkh.trueconnect@gmail.com',
+        },
+        {
+            icon: MdLocationPin, 
+            name: 'Địa chỉ của chúng tôi',
+            content: '80, 22/45/69B Hoàng Văn Thái',
+        }
+    ]
+
+    let networks = [
+        {icon: FaLinkedinIn},
+        {icon: FaInstagram},
+        {icon: FaFacebookF},
+        {icon: FaTwitter},
     ]
 
     return (
@@ -160,7 +219,7 @@ function WebMini() {
                 </div>
 
                 {/* Body 4: Điểm khác biệt của TrueConnect */}
-                <div className='lg:px-[11.18%] lg:py-[50px] flex flex-col lg:justify-start'>
+                <div className='lg:px-[10.556%] lg:py-[50px] flex flex-col lg:justify-start'>
                     <h1 className=' font-lora lg:text-[40px] font-bold text-primary'>Điểm khác biệt của TrueConnect</h1>
                     <div className='border-[#FF0054] border-[1px] lg:mb-[80px] lg:w-[26.389%]'></div>
                     <table className="table-auto w-full ">
@@ -231,85 +290,108 @@ function WebMini() {
                             Choose the perfect plan for your needs. Always flexible to grow
                         </p>
                     </div>
-                    <div className='w-full inline-flex gap-[32px] items-center justify-between'>
-                        <div className='lg:px-[40px] lg:pt-[64px] lg:pb-[40px] flex flex-col gap-[40px] bg-[#fff] rounded-[16px] shadow-itemMini'>
-                            <div className='flex flex-col gap-[40px]'>
-                                <div className=' relative flex flex-col items-start gap-[16px]'>
-                                    <h2 className=' font-bar font-semibold leading-[36px] text-primary'>Webmini 1</h2>
-                                    <div>
-                                        <span className=' font-bar text-[36px] font-bold leading-[54px] text-[#212B36]'>1.000.000</span>
-                                        <span className=' font-bar text-[20px] font-semibold leading-[30px] text-[#919EAB]'>/năm</span>
-                                    </div>
-                                    <img className=' absolute top-0 right-0' src={plane} alt=''/>
+                    <div className='w-full flex lg:flex-row lg:gap-[32px] items-center justify-between'>
+                        {
+                            ItemCost.map((item, index) => (
+                                <div key={index} className='lg:px-[2.7778%] lg:flex-1 lg:pt-[64px] lg:pb-[40px] flex flex-col gap-[40px] bg-[#fff] rounded-[16px] shadow-itemMini'>
+                                    <div className=' w-full flex flex-col gap-[40px]'>
+                                        <div className='w-full relative flex flex-col items-start gap-[16px]'>
+                                            <h2 className=' font-bar font-semibold leading-[36px] text-primary'>{item.name}</h2>
+                                            <div>
+                                                <span className=' font-bar text-[36px] font-bold leading-[54px] text-[#212B36]'>{item.cost}</span>
+                                                <span className=' font-bar text-[20px] font-semibold leading-[30px] text-[#919EAB]'>{item.pre}</span>
+                                            </div>
+                                            <img className=' absolute top-0 right-0' src={item.logo} alt=''/>
+                                        </div>
+                                        <div className='flex w-full flex-col items-start gap-[16px]'>
+                                            {
+                                                item.list.map((item2, index) => (
+                                                    <div className='flex justify-start items-center gap-[12px]' key={index}>
+                                                        <img className='w-[20px] h-[20px]' src={body6} alt=''/>
+                                                        <p className=' font-pop text-[14px] font-normal leading-[26px]'>{item2.text}</p>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
+                                    </div> 
+                                    <button className='px-[22px] py-[11px] bg-[#FF0054] text-[#fff] font-pop text-[15px] font-semibold leading-[26px] rounded-[8px]'>
+                                        Nâng cấp
+                                    </button> 
                                 </div>
-                                <div className='flex w-[282px] flex-col items-start gap-[16px]'>
+                            ))
+                        }
+                        
+                    </div>
+                </div>
+
+                {/* Body 7: Đánh giá của khách hàng */}
+                <div className='lg:px-[10.556%] lg:pt-[127px] flex flex-col lg:justify-start'>
+                    <h1 className=' font-lora lg:text-[40px] font-bold text-primary'>Đánh giá của Khách hàng </h1>
+                    <div className='border-[#FF0054] border-[1px] lg:mb-[80px] lg:w-[17.708%]'></div>
+                    <div className=' w-full flex lg:gap-[32px]'>
+                        {
+                            RateList.map((item, index) => (
+                                <div className='lg:flex-1 bg-[#10375C] px-[1.3889%] pt-[15px] lg:pb-[40px]' key={index}>
+                                    <video className='w-full rounded-[14px] lg:mb-[20px]' src={item.video} controls/>
+                                    <div className='flex items-center lg:ml-[2.778%] gap-[16px]'>
+                                        <img className='w-[56px] h-[56px] rounded-[56px]' src={item.avt} alt=''/>
+                                        <div className='flex flex-col items-start text-[#fff]'>
+                                            <p className=' font-lato text-[18px] font-bold leading-[28px]'>{item.name}</p>
+                                            <p className=' font-lato text-[16px] font-normal leading-[26px]'>{item.info}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                {/* Body 8: Liên hệ ngay với chúng tôi */}
+                <div className='lg:px-[10.556%] lg:pt-[99px] lg:pb-[150px] flex flex-col lg:justify-start lg:border-b-[1px] lg:border-primary'>
+                    <h1 className=' font-lora lg:text-[40px] font-bold text-primary'>Liên hệ ngay với chúng tôi</h1>
+                    <div className='border-[#FF0054] border-[1px] lg:mb-[80px] lg:w-[23.125%]'></div>
+                    <div className='flex lg:flex-row lg:justify-between'>
+                        <form className='flex flex-col items-start lg:px-[2.1528%] lg:py-[30px] bg-primary lg:w-[53.472%] gap-[20px] rounded-[10px]'>
+                            <input className='w-full py-[16px] lg:px-[1.3889%] lg:text-[16px] placeholder:leading-[20px] placeholder:font-medium placeholder:font-rale placeholder:text-[#252525] outline-none rounded-[10px] ' type='text' placeholder='Họ và tên'/>
+                            <input className='w-full py-[16px] lg:px-[1.3889%] lg:text-[16px] placeholder:leading-[20px] placeholder:font-medium placeholder:font-rale placeholder:text-[#252525] outline-none rounded-[10px] ' type='text' placeholder='Email'/>
+                            <input className='w-full py-[16px] lg:px-[1.3889%] lg:text-[16px] placeholder:leading-[20px] placeholder:font-medium placeholder:font-rale placeholder:text-[#252525] outline-none rounded-[10px] ' type='text' placeholder='Số điện thoại'/>
+                            <textarea className='w-full py-[16px] lg:px-[1.3889%] lg:text-[16px] placeholder:leading-[20px] placeholder:font-medium placeholder:font-rale placeholder:text-[#252525] outline-none rounded-[10px]  h-[160px]' type='text' placeholder='Ghi chú'/>
+                            <button className='lg:px-[20px] lg:py-[13px] mt-[30px] bg-secondary text-[#fff] font-pop lg:text-[16px] leading-[30px] font-normal rounded-[5px]'>Gửi ngay</button>
+                        </form>
+                        <div className='flex flex-col lg:px-[2.083%] lg:py-[30px] lg:justify-around'>
+                            <div className='w-full flex flex-col items-start lg:gap-[32px]'>
+                                {
+                                    contacts.map((item, index) => (
+                                        <div className='flex lg:gap-[16px]' key={index}>
+                                            <div className='lg:p-[20px] bg-[#F7F7F7] rounded-[10px]'>
+                                                <item.icon />
+                                            </div>
+                                            <div>
+                                                <h3 className=' font-rale lg:text-[20px] font-bold leading-[20px] text-secondary'>{item.name}</h3>
+                                                <p className=' font-pop lg:text-[16px] font-normal leading-[30px]'>{item.content}</p>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                            <div>
+                                <h2 className=' text-center text-[#0E1F51] font-rale lg:text-[24px] font-bold lg:leading-[25px] lg:mb-[30px]'>Follow chúng tôi</h2>
+                                <div className='flex justify-between'>
                                     {
-                                        List1.map((item, index) => (
-                                            <div className='flex justify-start items-center gap-[12px]' key={index}>
-                                                <img className='w-[20px] h-[20px]' src={body6} alt=''/>
-                                                <p className=' font-pop text-[14px] font-normal leading-[26px]'>{item.text}</p>
+                                        networks.map((item, index) => (
+                                            <div className='lg:p-[20px] bg-secondary lg:text-[24px] font-normal leading-[20px] rounded-[10px] text-[#fff]' key={index}>
+                                                <item.icon />
                                             </div>
                                         ))
                                     }
                                 </div>
-                            </div> 
-                            <button className='px-[22px] py-[11px] bg-[#FF0054] text-[#fff] font-pop text-[15px] font-semibold leading-[26px] rounded-[8px]'>
-                                Nâng cấp
-                            </button> 
-                        </div>
-                        <div className='lg:px-[40px] lg:pt-[64px] lg:pb-[40px] flex flex-col gap-[40px] bg-[#fff] rounded-[16px] shadow-itemMini'>
-                            <div className='flex flex-col gap-[40px]'>
-                                <div className=' relative flex flex-col items-start gap-[16px]'>
-                                    <h2 className=' font-bar font-semibold leading-[36px] text-primary'>Webmini 1</h2>
-                                    <div>
-                                        <span className=' font-bar text-[36px] font-bold leading-[54px] text-[#212B36]'>1.000.000</span>
-                                        <span className=' font-bar text-[20px] font-semibold leading-[30px] text-[#919EAB]'>/năm</span>
-                                    </div>
-                                    <img className=' absolute top-0 right-0' src={plane} alt=''/>
-                                </div>
-                                <div className='flex w-[282px] flex-col items-start gap-[16px]'>
-                                    {
-                                        List2.map((item, index) => (
-                                            <div className='flex justify-start items-center gap-[12px]' key={index}>
-                                                <img className='w-[20px] h-[20px]' src={body6} alt=''/>
-                                                <p className=' font-pop text-[14px] font-normal leading-[26px]'>{item.text}</p>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </div> 
-                            <button className='px-[22px] py-[11px] bg-[#FF0054] text-[#fff] font-pop text-[15px] font-semibold leading-[26px] rounded-[8px]'>
-                                Nâng cấp
-                            </button> 
-                        </div>
-                        <div className='lg:px-[40px] lg:pt-[64px] lg:pb-[40px] flex flex-col gap-[40px] bg-[#fff] rounded-[16px] shadow-itemMini'>
-                            <div className='flex flex-col gap-[40px]'>
-                                <div className=' relative flex flex-col items-start gap-[16px]'>
-                                    <h2 className=' font-bar font-semibold leading-[36px] text-primary'>Webmini 1</h2>
-                                    <div>
-                                        <span className=' font-bar text-[36px] font-bold leading-[54px] text-[#212B36]'>1.000.000</span>
-                                        <span className=' font-bar text-[20px] font-semibold leading-[30px] text-[#919EAB]'>/năm</span>
-                                    </div>
-                                    <img className=' absolute top-0 right-0' src={plane} alt=''/>
-                                </div>
-                                <div className='flex w-[282px] flex-col items-start gap-[16px]'>
-                                    {
-                                        List3.map((item, index) => (
-                                            <div className='flex justify-start items-center gap-[12px]' key={index}>
-                                                <img className='w-[20px] h-[20px]' src={body6} alt=''/>
-                                                <p className=' font-pop text-[14px] font-normal leading-[26px]'>{item.text}</p>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </div> 
-                            <button className='px-[22px] py-[11px] bg-[#FF0054] text-[#fff] font-pop text-[15px] font-semibold leading-[26px] rounded-[8px]'>
-                                Nâng cấp
-                            </button> 
+                            </div>
                         </div>
                     </div>
                 </div>
 
+
+                {/* Footer */}
                 <Footer />
             </div>
         </div>

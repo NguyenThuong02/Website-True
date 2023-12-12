@@ -26,6 +26,7 @@ module.exports = {
       'bar': ['Barlow', 'sans-serif'],
       'rale': ['Raleway', 'sans-serif'],
       'jos': ['Josefin Sans', 'sans-serif'],
+      'lato': ['Lato', 'sans-serif'],
     },
   },
   plugins: [
